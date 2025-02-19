@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int casas_decimais;
+
+int main(){
+  int i;
+  double pi =0;
+  double sinal =1;
+  double denominador =1;
+  
+  printf("Digite o número de casas decimais:");
+  scanf("%d", &casas_decimais);
+
+  for(i=0; i<casas_decimais; i++){
+    pi += sinal/denominador;
+    sinal = sinal * -1;
+    denominador = denominador + 2;
+  }
+  pi = 4*pi;
+  printf("O valor de pi é: %.2f", pi);
+  return 0;
+}
