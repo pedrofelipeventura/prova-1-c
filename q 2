@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int pontoa(int xa, int ya);
+int pontob(int xb, int yb);
+
+int main(){
+    int xa,xb,ya,yb;
+    int maior_distancia;
+  printf("Digite os valores de x e y do ponto A:");
+  scanf("%d %d", &xa, &ya);
+  printf("Digite os valores de x e y do ponto B:");
+  scanf("%d %d", &xb, &yb);
+  maior_distancia = 0;
+
+  int distancia_a = abs(xb-xa);
+  int distancia_b = abs(yb-ya);
+  
+  if(distancia_a > distancia_b){
+    maior_distancia = distancia_a;
+  } else {
+    maior_distancia = distancia_b;
+  }
+  printf("A maior distancia entre os pontos A e B é: %d",maior_distancia);
+  return 0;
+  
+}
