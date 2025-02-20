@@ -1,0 +1,20 @@
+// precisa que o usuári informe o qmax, n ;
+// onde n é o total de processos e qmax é o maximo de recursos;
+// rmin = n(qmax -1) + 1
+
+#include <stdio.h>
+
+int n, qmax, i=1, rmin =0;
+
+int main(){
+    printf("Digite o número de processos:\n");
+    scanf("%d", &n);
+    printf("Digite o máximo de recursos:\n");
+    scanf("%d", &qmax);
+    
+    rmin = n * (qmax -1) + 1;
+    
+    printf("Rmin é igual a: %d\n", rmin);
+
+    return 0;
+}
