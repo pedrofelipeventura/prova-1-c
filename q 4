@@ -1,0 +1,46 @@
+//equipamento de 1 a 4, leitura 0 ou 1, status 0  ou 1;
+#include<stdio.h>
+#include<string.h>
+
+int num_equipamento, leitura, status, i,x;
+char mensagemstatus[10], mensagemleitura[10];
+
+int main(){
+    printf("Digite o número do equipamento (variando de 1 a 4): ");
+    scanf("%d", &num_equipamento);
+
+    if(num_equipamento<1 || num_equipamento> 4){
+        printf("Número inválido");
+        return 1;
+    }
+
+    printf("Digite a leitura do equipamento (0: baixo, 1: alto): ");
+    scanf("%d", &leitura);
+
+    if(leitura != 0 && leitura != 1){
+        printf("Valor inválido");
+        return 1;
+    } 
+    if(leitura = 1){
+        strcpy ( mensagemleitura, ("alto") );
+    } else{
+        strcpy ( mensagemleitura, ("baixo") );
+    }
+
+    printf("Digite o status do equipamento (0: desligado, 1: ligado): ");
+    scanf("%d", &status);
+
+    if(status != 0 && status != 1){
+        printf("Valor inválido");
+        return 1;
+    }
+    if(status = 1){
+       strcpy (mensagemstatus,("ligado"));
+    } else{
+       strcpy (mensagemstatus,("desligado"));
+    }
+
+    printf("Equipamento %d - %s - %s", num_equipamento, mensagemstatus, mensagemleitura);
+
+    return 0;
+}
