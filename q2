@@ -1,0 +1,29 @@
+/*
+diatancia maxima entre xa, xb ou ya, yb
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+
+    int xa, xb, ya, yb;
+    int distanciax, distanciay;
+    int maiordistancia = 0;
+
+    printf("Digite os valores de xa, xb:\n \n");
+    scanf("%d %d", &xa, &xb);
+    printf("Digite os valores de ya, yb:\n \n");
+    scanf("%d %d", &ya, &yb);
+
+    distanciax = abs(xa - xb);
+    distanciay = abs(ya - yb);
+
+    if(distanciax > distanciay){
+        maiordistancia = distanciax;
+    }else{
+        maiordistancia = distanciay;
+    }
+    printf("Maior distancia = %d", maiordistancia);
+    return 0;
+}
