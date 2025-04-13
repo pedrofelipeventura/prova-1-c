@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(){
+int n, rmin, qmax;
+  printf("Digite o número de processos:\n");
+  scanf("%d",&n);
+  printf("Digite o número máximo de processos");
+  scanf("%d",&qmax);
+
+  rmin = n*(qmax - 1) + 1;
+
+  printf("O número mínimo de recursos é: %d\n", rmin);
+
+return 0;
+}
