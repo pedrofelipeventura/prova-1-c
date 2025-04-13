@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+#define QTD_DISPOSITIVOS 4
+int main(){
+
+    unsigned char x = 0b10101001;
+    unsigned char mask = 0x01;
+    unsigned char pos;
+
+    puts("Digite o equipamento que você deseja verificar:\n");
+    scanf("%hhu", &pos);
+
+    (x & (mask << (pos -1))) ? puts("Ligado"):puts("Desligado"); 
+    (x & (mask << (pos-1 + QTD_DISPOSITIVOS))) ? puts("Alto"):puts("Baixo"); 
+
+    return 0;
+}
